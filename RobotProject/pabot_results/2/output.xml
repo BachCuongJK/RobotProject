@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20231010 21:03:06.567" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="LoginTest" source="C:\Users\jinjh\PycharmProjects\RobotProject\TestCases\LoginTest.robot">
+<kw name="Open My Web" library="LoginResources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 21:03:07.007" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20231010 21:03:07.005" endtime="20231010 21:03:09.893"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 21:03:09.896" endtime="20231010 21:03:10.029"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 21:03:10.029" endtime="20231010 21:03:10.029"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:03:10.033" level="INFO">Clicking element 'id:login2'.</msg>
+<status status="PASS" starttime="20231010 21:03:10.033" endtime="20231010 21:03:10.109"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:07.005" endtime="20231010 21:03:10.109"/>
+</kw>
+<test id="s1-s1-t1" name="Valid Login" line="8">
+<kw name="Enter username" library="LoginResources">
+<arg>chaeyo2</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${input_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 21:03:10.113" level="INFO">Typing text 'chaeyo2' into text field 'id:loginusername'.</msg>
+<status status="PASS" starttime="20231010 21:03:10.112" endtime="20231010 21:03:10.426"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:10.109" endtime="20231010 21:03:10.426"/>
+</kw>
+<kw name="Enter pwd" library="LoginResources">
+<arg>chaeyoung230499</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pwd}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 21:03:10.430" level="INFO">Typing text 'chaeyoung230499' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20231010 21:03:10.428" endtime="20231010 21:03:10.554"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:10.427" endtime="20231010 21:03:10.554"/>
+</kw>
+<kw name="Click login button" library="LoginResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:03:10.556" level="INFO">Clicking element 'xpath://button[@onclick="logIn()"]'.</msg>
+<status status="PASS" starttime="20231010 21:03:10.555" endtime="20231010 21:03:10.629"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:10.554" endtime="20231010 21:03:10.629"/>
+</kw>
+<kw name="Login Succesfully" library="LoginResources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 21:03:12.269" level="INFO">Current page contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20231010 21:03:10.630" endtime="20231010 21:03:12.271"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:10.630" endtime="20231010 21:03:12.271"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:10.109" endtime="20231010 21:03:12.271"/>
+</test>
+<kw name="Close Browser" library="LoginResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231010 21:03:12.272" endtime="20231010 21:03:18.532"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:12.272" endtime="20231010 21:03:18.532"/>
+</kw>
+<status status="PASS" starttime="20231010 21:03:06.603" endtime="20231010 21:03:18.532"/>
+</suite>
+<status status="PASS" starttime="20231010 21:03:06.570" endtime="20231010 21:03:18.535"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="LoginTest">Suites.LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231010 21:03:06.567" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\jinjh\PycharmProjects\RobotProject\venv\Scripts\robot.exe
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39
+  C:\Users\jinjh\PycharmProjects\RobotProject\venv
+  C:\Users\jinjh\PycharmProjects\RobotProject\venv\lib\site-packages</msg>
+</errors>
+</robot>

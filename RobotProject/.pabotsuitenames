@@ -1,0 +1,7 @@
+datasources:7c379404a0c003c526277f481f03502425ba2559
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:6b87896157afade5bb23113985fd367f75b61f4c
+--suite Suites.AddLatopTest
+--suite Suites.AddPhoneTest
+--suite Suites.LoginTest

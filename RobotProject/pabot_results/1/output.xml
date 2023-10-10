@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20231010 21:02:06.918" rpa="false" schemaversion="4">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="AddPhoneTest" source="C:\Users\jinjh\PycharmProjects\RobotProject\TestCases\AddPhoneTest.robot">
+<test id="s1-s1-t1" name="Test Click One Phone" line="9">
+<kw name="Open My Browser" library="PhoneCategoriesResources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.demoblaze.com/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 21:02:07.299" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20231010 21:02:07.299" endtime="20231010 21:02:21.202"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 21:02:21.202" endtime="20231010 21:02:21.325"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 21:02:21.325" endtime="20231010 21:02:21.326"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 21:02:24.339" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231010 21:02:21.326" endtime="20231010 21:02:24.339"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:07.299" endtime="20231010 21:02:24.340"/>
+</kw>
+<kw name="Click Phones Categories" library="PhoneCategoriesResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${phonesCategories}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:24.341" level="INFO">Clicking element 'xpath:(//a[@class="list-group-item"])[2]'.</msg>
+<status status="PASS" starttime="20231010 21:02:24.340" endtime="20231010 21:02:24.420"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:24.340" endtime="20231010 21:02:24.420"/>
+</kw>
+<kw name="Click A phone" library="PhoneCategoriesResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${secondItems}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:24.422" level="INFO">Clicking element 'xpath://a[@href="prod.html?idp_=1"]//img'.</msg>
+<status status="PASS" starttime="20231010 21:02:24.421" endtime="20231010 21:02:25.253"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:24.420" endtime="20231010 21:02:25.253"/>
+</kw>
+<kw name="Verify Name Is Displayed" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mobilePrice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:25.254" endtime="20231010 21:02:26.140"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${mobilePrice}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231010 21:02:26.166" level="INFO">Element 'xpath://h3[@class="price-container"]' is displayed.</msg>
+<status status="PASS" starttime="20231010 21:02:26.140" endtime="20231010 21:02:26.166"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:25.253" endtime="20231010 21:02:26.166"/>
+</kw>
+<kw name="Verify Price Is Displayed" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${mobileName}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:26.166" endtime="20231010 21:02:26.191"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${mobileName}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231010 21:02:26.212" level="INFO">Element 'xpath://h2[@class="name"]' is displayed.</msg>
+<status status="PASS" starttime="20231010 21:02:26.191" endtime="20231010 21:02:26.212"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:26.166" endtime="20231010 21:02:26.212"/>
+</kw>
+<kw name="Verify Img Is Displayed" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${phoneImg}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:26.212" endtime="20231010 21:02:26.244"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${phoneImg}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231010 21:02:26.275" level="INFO">Element 'xpath://div[@class="item active"]//img' is displayed.</msg>
+<status status="PASS" starttime="20231010 21:02:26.244" endtime="20231010 21:02:26.276"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:26.212" endtime="20231010 21:02:26.276"/>
+</kw>
+<kw name="Verify Description Is Displayed" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${phoneDescription}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:26.276" endtime="20231010 21:02:26.314"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${phoneDescription}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231010 21:02:26.346" level="INFO">Element 'xpath://div[@class="description description-tabs"]' is displayed.</msg>
+<status status="PASS" starttime="20231010 21:02:26.314" endtime="20231010 21:02:26.346"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:26.276" endtime="20231010 21:02:26.346"/>
+</kw>
+<kw name="Verify Add To Cart Is Displayed" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:26.346" endtime="20231010 21:02:26.384"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231010 21:02:26.428" level="INFO">Element 'xpath://a[@class="btn btn-success btn-lg"]' is displayed.</msg>
+<status status="PASS" starttime="20231010 21:02:26.384" endtime="20231010 21:02:26.428"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:26.346" endtime="20231010 21:02:26.428"/>
+</kw>
+<kw name="Close Browser" library="PhoneCategoriesResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231010 21:02:26.430" endtime="20231010 21:02:32.745"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:26.430" endtime="20231010 21:02:32.746"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:07.297" endtime="20231010 21:02:32.746"/>
+</test>
+<test id="s1-s1-t2" name="Add One Phone Successfully" line="18">
+<kw name="Open My Browser" library="PhoneCategoriesResources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.demoblaze.com/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 21:02:32.788" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20231010 21:02:32.786" endtime="20231010 21:02:36.539"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 21:02:36.539" endtime="20231010 21:02:36.678"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 21:02:36.678" endtime="20231010 21:02:36.679"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 21:02:39.693" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231010 21:02:36.679" endtime="20231010 21:02:39.693"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:32.784" endtime="20231010 21:02:39.693"/>
+</kw>
+<kw name="Click Phones Categories" library="PhoneCategoriesResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${phonesCategories}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:39.695" level="INFO">Clicking element 'xpath:(//a[@class="list-group-item"])[2]'.</msg>
+<status status="PASS" starttime="20231010 21:02:39.694" endtime="20231010 21:02:39.839"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:39.694" endtime="20231010 21:02:39.840"/>
+</kw>
+<kw name="Click A phone" library="PhoneCategoriesResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${secondItems}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:39.843" level="INFO">Clicking element 'xpath://a[@href="prod.html?idp_=1"]//img'.</msg>
+<status status="PASS" starttime="20231010 21:02:39.842" endtime="20231010 21:02:40.339"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:39.840" endtime="20231010 21:02:40.339"/>
+</kw>
+<kw name="Click Add To Cart" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:40.341" endtime="20231010 21:02:41.047"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:41.048" level="INFO">Clicking element 'xpath://a[@class="btn btn-success btn-lg"]'.</msg>
+<status status="PASS" starttime="20231010 21:02:41.047" endtime="20231010 21:02:41.152"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:40.339" endtime="20231010 21:02:41.153"/>
+</kw>
+<kw name="Add Successfully" library="PhoneCategoriesResources">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Product added</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20231010 21:02:41.154" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20231010 21:02:41.154" endtime="20231010 21:02:42.189"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:41.153" endtime="20231010 21:02:42.189"/>
+</kw>
+<kw name="Close Browser" library="PhoneCategoriesResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231010 21:02:42.191" endtime="20231010 21:02:48.484"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:42.190" endtime="20231010 21:02:48.484"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:32.747" endtime="20231010 21:02:48.484"/>
+</test>
+<test id="s1-s1-t3" name="Verify Phone Added To Cart Successfully" line="24">
+<kw name="Open My Browser" library="PhoneCategoriesResources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.demoblaze.com/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 21:02:48.487" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20231010 21:02:48.487" endtime="20231010 21:02:51.322"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 21:02:51.322" endtime="20231010 21:02:51.452"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 21:02:51.452" endtime="20231010 21:02:51.454"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 21:02:54.456" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231010 21:02:51.454" endtime="20231010 21:02:54.456"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:48.485" endtime="20231010 21:02:54.456"/>
+</kw>
+<kw name="Click Phones Categories" library="PhoneCategoriesResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${phonesCategories}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:54.459" level="INFO">Clicking element 'xpath:(//a[@class="list-group-item"])[2]'.</msg>
+<status status="PASS" starttime="20231010 21:02:54.457" endtime="20231010 21:02:54.567"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:54.456" endtime="20231010 21:02:54.567"/>
+</kw>
+<kw name="Click A phone" library="PhoneCategoriesResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${secondItems}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:54.568" level="INFO">Clicking element 'xpath://a[@href="prod.html?idp_=1"]//img'.</msg>
+<status status="PASS" starttime="20231010 21:02:54.568" endtime="20231010 21:02:55.266"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:54.567" endtime="20231010 21:02:55.266"/>
+</kw>
+<kw name="Click Add To Cart" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:55.267" endtime="20231010 21:02:56.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${addToCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:56.000" level="INFO">Clicking element 'xpath://a[@class="btn btn-success btn-lg"]'.</msg>
+<status status="PASS" starttime="20231010 21:02:56.000" endtime="20231010 21:02:56.064"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:55.267" endtime="20231010 21:02:56.064"/>
+</kw>
+<kw name="Add Successfully" library="PhoneCategoriesResources">
+<kw name="Alert Should Be Present" library="SeleniumLibrary">
+<arg>Product added</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<msg timestamp="20231010 21:02:56.069" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20231010 21:02:56.069" endtime="20231010 21:02:57.112"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:56.064" endtime="20231010 21:02:57.112"/>
+</kw>
+<kw name="Click Cart" library="PhoneCategoriesResources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${cart}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231010 21:02:57.113" endtime="20231010 21:02:57.157"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:57.158" level="INFO">Clicking element '//a[contains(text(),"Cart")]'.</msg>
+<status status="PASS" starttime="20231010 21:02:57.157" endtime="20231010 21:02:57.912"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:57.113" endtime="20231010 21:02:57.912"/>
+</kw>
+<kw name="Get Items Details" library="PhoneCategoriesResources">
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231010 21:02:58.927" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231010 21:02:57.913" endtime="20231010 21:02:58.927"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${Items}</var>
+<arg>${cells}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20231010 21:02:59.036" level="INFO">${Items} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="3e14e073a66f0f637e7bc2bb96bb5a86", element="70AEABF357180690889499A91AF4A023_element_157")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<status status="PASS" starttime="20231010 21:02:58.927" endtime="20231010 21:02:59.036"/>
+</kw>
+<for flavor="IN">
+<var>${Item}</var>
+<value>@{Items}</value>
+<iter>
+<var name="${Item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e14e073a66f0f637e7bc2bb96bb5a86", element="70AEABF357180690889499A91AF4A023_element_157")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${Item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:59.069" level="INFO">${text} = </msg>
+<status status="PASS" starttime="20231010 21:02:59.037" endtime="20231010 21:02:59.069"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231010 21:02:59.069" endtime="20231010 21:02:59.069"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:59.037" endtime="20231010 21:02:59.070"/>
+</iter>
+<iter>
+<var name="${Item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e14e073a66f0f637e7bc2bb96bb5a86", element="70AEABF357180690889499A91AF4A023_element_158")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${Item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:59.088" level="INFO">${text} = Samsung galaxy s6</msg>
+<status status="PASS" starttime="20231010 21:02:59.070" endtime="20231010 21:02:59.089"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231010 21:02:59.089" endtime="20231010 21:02:59.089"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:59.070" endtime="20231010 21:02:59.089"/>
+</iter>
+<iter>
+<var name="${Item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e14e073a66f0f637e7bc2bb96bb5a86", element="70AEABF357180690889499A91AF4A023_element_159")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${Item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:59.107" level="INFO">${text} = 360</msg>
+<status status="PASS" starttime="20231010 21:02:59.090" endtime="20231010 21:02:59.107"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231010 21:02:59.107" endtime="20231010 21:02:59.108"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:59.089" endtime="20231010 21:02:59.108"/>
+</iter>
+<iter>
+<var name="${Item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="3e14e073a66f0f637e7bc2bb96bb5a86", element="70AEABF357180690889499A91AF4A023_element_160")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${text}</var>
+<arg>${Item}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231010 21:02:59.124" level="INFO">${text} = Delete</msg>
+<status status="PASS" starttime="20231010 21:02:59.108" endtime="20231010 21:02:59.124"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${text}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231010 21:02:59.124" endtime="20231010 21:02:59.125"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:59.108" endtime="20231010 21:02:59.125"/>
+</iter>
+<status status="PASS" starttime="20231010 21:02:59.037" endtime="20231010 21:02:59.125"/>
+</for>
+<status status="PASS" starttime="20231010 21:02:57.912" endtime="20231010 21:02:59.125"/>
+</kw>
+<kw name="Close Browser" library="PhoneCategoriesResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231010 21:02:59.127" endtime="20231010 21:03:01.368"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:59.125" endtime="20231010 21:03:01.368"/>
+</kw>
+<status status="PASS" starttime="20231010 21:02:48.485" endtime="20231010 21:03:01.369"/>
+</test>
+<status status="PASS" starttime="20231010 21:02:06.963" endtime="20231010 21:03:01.370"/>
+</suite>
+<status status="PASS" starttime="20231010 21:02:06.927" endtime="20231010 21:03:01.371"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="AddPhoneTest">Suites.AddPhoneTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231010 21:02:06.924" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\jinjh\PycharmProjects\RobotProject\venv\Scripts\robot.exe
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\jinjh\AppData\Local\Programs\Python\Python39
+  C:\Users\jinjh\PycharmProjects\RobotProject\venv
+  C:\Users\jinjh\PycharmProjects\RobotProject\venv\lib\site-packages</msg>
+</errors>
+</robot>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.13 on win32)" generated="20231010 23:23:11.916" rpa="false" schemaversion="4">
+<suite id="s1" name="LoginTest" source="C:\Users\jinjh\PycharmProjects\RobotProject\TestCases\LoginTest.robot">
+<kw name="Open My Web" library="LoginResources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SiteUrl}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231010 23:23:12.693" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/index.html'.</msg>
+<status status="PASS" starttime="20231010 23:23:12.691" endtime="20231010 23:23:20.442"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231010 23:23:20.442" endtime="20231010 23:23:20.570"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231010 23:23:20.570" endtime="20231010 23:23:20.571"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:20.572" level="INFO">Clicking element 'id:login2'.</msg>
+<status status="PASS" starttime="20231010 23:23:20.571" endtime="20231010 23:23:20.648"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:12.691" endtime="20231010 23:23:20.648"/>
+</kw>
+<test id="s1-t1" name="Test Login" line="12">
+<kw name="Login">
+<arg>chaeyo2</arg>
+<arg>chaeyoung23049</arg>
+<kw name="Enter username" library="LoginResources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${input_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:20.653" level="INFO">Typing text 'chaeyo2' into text field 'id:loginusername'.</msg>
+<status status="PASS" starttime="20231010 23:23:20.653" endtime="20231010 23:23:20.923"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:20.652" endtime="20231010 23:23:20.923"/>
+</kw>
+<kw name="Enter pwd" library="LoginResources">
+<arg>${pwd}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pwd}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:20.924" level="INFO">Typing text 'chaeyoung23049' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20231010 23:23:20.924" endtime="20231010 23:23:21.071"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:20.923" endtime="20231010 23:23:21.072"/>
+</kw>
+<kw name="Click login button" library="LoginResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:21.073" level="INFO">Clicking element 'xpath://button[@onclick="logIn()"]'.</msg>
+<status status="PASS" starttime="20231010 23:23:21.072" endtime="20231010 23:23:21.144"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:21.072" endtime="20231010 23:23:21.144"/>
+</kw>
+<kw name="Login Succesfully" library="LoginResources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 23:23:22.164" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-32.png"&gt;&lt;img src="selenium-screenshot-32.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231010 23:23:22.164" level="FAIL">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF601197D12+55474]
+	(No symbol) [0x00007FF6011077C2]
+	(No symbol) [0x00007FF600FBE0EB]
+	(No symbol) [0x00007FF601038132]
+	(No symbol) [0x00007FF60101EF33]
+	(No symbol) [0x00007FF600FF3D41]
+	(No symbol) [0x00007FF600FF4F84]
+	GetHandleVerifier [0x00007FF6014FB762+3609346]
+	GetHandleVerifier [0x00007FF601551A80+3962400]
+	GetHandleVerifier [0x00007FF601549F0F+3930799]
+	GetHandleVerifier [0x00007FF601233CA6+694342]
+	(No symbol) [0x00007FF601112218]
+	(No symbol) [0x00007FF60110E484]
+	(No symbol) [0x00007FF60110E5B2]
+	(No symbol) [0x00007FF6010FEE13]
+	BaseThreadInitThunk [0x00007FF990201F87+23]
+	RtlUserThreadStart [0x00007FF990E7B5B0+32]
+</msg>
+<status status="FAIL" starttime="20231010 23:23:21.145" endtime="20231010 23:23:22.229"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:21.145" endtime="20231010 23:23:22.229"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:20.652" endtime="20231010 23:23:22.230"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:20.648" endtime="20231010 23:23:22.231">UnexpectedAlertPresentException: Alert Text: Wrong password.
+Message: unexpected alert open: {Alert text : Wrong password.}
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF601197D12+55474]
+	(No symbol) [0x00007FF6011077C2]
+	(No symbol) [0x00007FF600FBE0EB]
+	(No symbol) [0x00007FF601038132]
+	(No symbol) [0x00007FF60101EF33]
+	(No symbol) [0x00007FF600FF3D41]
+	(No symbol) [0x00007FF600FF4F84]
+	GetHandleVerifier [0x00007FF6014FB762+3609346]
+	GetHandleVerifier [0x00007FF601551A80+3962400]
+	GetHandleVerifier [0x00007FF601549F0F+3930799]
+	GetHandleVerifier [0x00007FF601233CA6+694342]
+	(No symbol) [0x00007FF601112218]
+	(No symbol) [0x00007FF60110E484]
+	(No symbol) [0x00007FF60110E5B2]
+	(No symbol) [0x00007FF6010FEE13]
+	BaseThreadInitThunk [0x00007FF990201F87+23]
+	RtlUserThreadStart [0x00007FF990E7B5B0+32]
+</status>
+</test>
+<test id="s1-t2" name="Test Login" line="12">
+<kw name="Login">
+<arg>chaeyo3</arg>
+<arg>chaeyoung23049</arg>
+<kw name="Enter username" library="LoginResources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${input_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:22.239" level="INFO">Typing text 'chaeyo3' into text field 'id:loginusername'.</msg>
+<status status="PASS" starttime="20231010 23:23:22.237" endtime="20231010 23:23:22.374"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:22.237" endtime="20231010 23:23:22.375"/>
+</kw>
+<kw name="Enter pwd" library="LoginResources">
+<arg>${pwd}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pwd}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:22.378" level="INFO">Typing text 'chaeyoung23049' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20231010 23:23:22.376" endtime="20231010 23:23:22.512"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:22.375" endtime="20231010 23:23:22.512"/>
+</kw>
+<kw name="Click login button" library="LoginResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:22.513" level="INFO">Clicking element 'xpath://button[@onclick="logIn()"]'.</msg>
+<status status="PASS" starttime="20231010 23:23:22.513" endtime="20231010 23:23:22.566"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:22.512" endtime="20231010 23:23:22.566"/>
+</kw>
+<kw name="Login Succesfully" library="LoginResources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 23:23:23.326" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-33.png"&gt;&lt;img src="selenium-screenshot-33.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231010 23:23:23.326" level="FAIL">UnexpectedAlertPresentException: Alert Text: User does not exist.
+Message: unexpected alert open: {Alert text : User does not exist.}
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF601197D12+55474]
+	(No symbol) [0x00007FF6011077C2]
+	(No symbol) [0x00007FF600FBE0EB]
+	(No symbol) [0x00007FF601038132]
+	(No symbol) [0x00007FF60101EF33]
+	(No symbol) [0x00007FF600FF3D41]
+	(No symbol) [0x00007FF600FF4F84]
+	GetHandleVerifier [0x00007FF6014FB762+3609346]
+	GetHandleVerifier [0x00007FF601551A80+3962400]
+	GetHandleVerifier [0x00007FF601549F0F+3930799]
+	GetHandleVerifier [0x00007FF601233CA6+694342]
+	(No symbol) [0x00007FF601112218]
+	(No symbol) [0x00007FF60110E484]
+	(No symbol) [0x00007FF60110E5B2]
+	(No symbol) [0x00007FF6010FEE13]
+	BaseThreadInitThunk [0x00007FF990201F87+23]
+	RtlUserThreadStart [0x00007FF990E7B5B0+32]
+</msg>
+<status status="FAIL" starttime="20231010 23:23:22.567" endtime="20231010 23:23:23.328"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:22.567" endtime="20231010 23:23:23.328"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:22.236" endtime="20231010 23:23:23.328"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:22.234" endtime="20231010 23:23:23.328">UnexpectedAlertPresentException: Alert Text: User does not exist.
+Message: unexpected alert open: {Alert text : User does not exist.}
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF601197D12+55474]
+	(No symbol) [0x00007FF6011077C2]
+	(No symbol) [0x00007FF600FBE0EB]
+	(No symbol) [0x00007FF601038132]
+	(No symbol) [0x00007FF60101EF33]
+	(No symbol) [0x00007FF600FF3D41]
+	(No symbol) [0x00007FF600FF4F84]
+	GetHandleVerifier [0x00007FF6014FB762+3609346]
+	GetHandleVerifier [0x00007FF601551A80+3962400]
+	GetHandleVerifier [0x00007FF601549F0F+3930799]
+	GetHandleVerifier [0x00007FF601233CA6+694342]
+	(No symbol) [0x00007FF601112218]
+	(No symbol) [0x00007FF60110E484]
+	(No symbol) [0x00007FF60110E5B2]
+	(No symbol) [0x00007FF6010FEE13]
+	BaseThreadInitThunk [0x00007FF990201F87+23]
+	RtlUserThreadStart [0x00007FF990E7B5B0+32]
+</status>
+</test>
+<test id="s1-t3" name="Test Login" line="12">
+<kw name="Login">
+<arg>chaeyo3</arg>
+<arg>chaeyoung230499</arg>
+<kw name="Enter username" library="LoginResources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${input_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:23.334" level="INFO">Typing text 'chaeyo3' into text field 'id:loginusername'.</msg>
+<status status="PASS" starttime="20231010 23:23:23.333" endtime="20231010 23:23:23.462"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:23.333" endtime="20231010 23:23:23.462"/>
+</kw>
+<kw name="Enter pwd" library="LoginResources">
+<arg>${pwd}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pwd}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:23.464" level="INFO">Typing text 'chaeyoung230499' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20231010 23:23:23.462" endtime="20231010 23:23:23.607"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:23.462" endtime="20231010 23:23:23.607"/>
+</kw>
+<kw name="Click login button" library="LoginResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:23.608" level="INFO">Clicking element 'xpath://button[@onclick="logIn()"]'.</msg>
+<status status="PASS" starttime="20231010 23:23:23.608" endtime="20231010 23:23:23.669"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:23.607" endtime="20231010 23:23:23.670"/>
+</kw>
+<kw name="Login Succesfully" library="LoginResources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 23:23:24.473" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231010 23:23:24.477" level="FAIL">UnexpectedAlertPresentException: Alert Text: User does not exist.
+Message: unexpected alert open: {Alert text : User does not exist.}
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF601197D12+55474]
+	(No symbol) [0x00007FF6011077C2]
+	(No symbol) [0x00007FF600FBE0EB]
+	(No symbol) [0x00007FF601038132]
+	(No symbol) [0x00007FF60101EF33]
+	(No symbol) [0x00007FF600FF3D41]
+	(No symbol) [0x00007FF600FF4F84]
+	GetHandleVerifier [0x00007FF6014FB762+3609346]
+	GetHandleVerifier [0x00007FF601551A80+3962400]
+	GetHandleVerifier [0x00007FF601549F0F+3930799]
+	GetHandleVerifier [0x00007FF601233CA6+694342]
+	(No symbol) [0x00007FF601112218]
+	(No symbol) [0x00007FF60110E484]
+	(No symbol) [0x00007FF60110E5B2]
+	(No symbol) [0x00007FF6010FEE13]
+	BaseThreadInitThunk [0x00007FF990201F87+23]
+	RtlUserThreadStart [0x00007FF990E7B5B0+32]
+</msg>
+<status status="FAIL" starttime="20231010 23:23:23.670" endtime="20231010 23:23:24.478"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:23.670" endtime="20231010 23:23:24.478"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:23.332" endtime="20231010 23:23:24.478"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:23.331" endtime="20231010 23:23:24.480">UnexpectedAlertPresentException: Alert Text: User does not exist.
+Message: unexpected alert open: {Alert text : User does not exist.}
+  (Session info: chrome=117.0.5938.150)
+Stacktrace:
+	GetHandleVerifier [0x00007FF601197D12+55474]
+	(No symbol) [0x00007FF6011077C2]
+	(No symbol) [0x00007FF600FBE0EB]
+	(No symbol) [0x00007FF601038132]
+	(No symbol) [0x00007FF60101EF33]
+	(No symbol) [0x00007FF600FF3D41]
+	(No symbol) [0x00007FF600FF4F84]
+	GetHandleVerifier [0x00007FF6014FB762+3609346]
+	GetHandleVerifier [0x00007FF601551A80+3962400]
+	GetHandleVerifier [0x00007FF601549F0F+3930799]
+	GetHandleVerifier [0x00007FF601233CA6+694342]
+	(No symbol) [0x00007FF601112218]
+	(No symbol) [0x00007FF60110E484]
+	(No symbol) [0x00007FF60110E5B2]
+	(No symbol) [0x00007FF6010FEE13]
+	BaseThreadInitThunk [0x00007FF990201F87+23]
+	RtlUserThreadStart [0x00007FF990E7B5B0+32]
+</status>
+</test>
+<test id="s1-t4" name="Test Login" line="12">
+<kw name="Login">
+<arg>chaeyo2</arg>
+<arg>chaeyoung230499</arg>
+<kw name="Enter username" library="LoginResources">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${input_username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:24.494" level="INFO">Typing text 'chaeyo2' into text field 'id:loginusername'.</msg>
+<status status="PASS" starttime="20231010 23:23:24.492" endtime="20231010 23:23:24.722"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:24.489" endtime="20231010 23:23:24.722"/>
+</kw>
+<kw name="Enter pwd" library="LoginResources">
+<arg>${pwd}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pwd}</arg>
+<arg>${input_pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:24.723" level="INFO">Typing text 'chaeyoung230499' into text field 'id:loginpassword'.</msg>
+<status status="PASS" starttime="20231010 23:23:24.723" endtime="20231010 23:23:24.933"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:24.722" endtime="20231010 23:23:24.933"/>
+</kw>
+<kw name="Click login button" library="LoginResources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231010 23:23:24.933" level="INFO">Clicking element 'xpath://button[@onclick="logIn()"]'.</msg>
+<status status="PASS" starttime="20231010 23:23:24.933" endtime="20231010 23:23:25.006"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:24.933" endtime="20231010 23:23:25.006"/>
+</kw>
+<kw name="Login Succesfully" library="LoginResources">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231010 23:23:26.612" level="INFO">Current page contains text 'Welcome'.</msg>
+<status status="PASS" starttime="20231010 23:23:25.006" endtime="20231010 23:23:26.612"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:25.006" endtime="20231010 23:23:26.612"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:24.489" endtime="20231010 23:23:26.612"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:24.485" endtime="20231010 23:23:26.613"/>
+</test>
+<kw name="Close Browser" library="LoginResources" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20231010 23:23:26.615" endtime="20231010 23:23:28.880"/>
+</kw>
+<status status="PASS" starttime="20231010 23:23:26.615" endtime="20231010 23:23:28.880"/>
+</kw>
+<status status="FAIL" starttime="20231010 23:23:11.923" endtime="20231010 23:23:28.880"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="3" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231010 23:23:22.233" level="WARN">Multiple tests with name 'Test Login' executed in suite 'LoginTest'.</msg>
+<msg timestamp="20231010 23:23:23.330" level="WARN">Multiple tests with name 'Test Login' executed in suite 'LoginTest'.</msg>
+<msg timestamp="20231010 23:23:24.483" level="WARN">Multiple tests with name 'Test Login' executed in suite 'LoginTest'.</msg>
+</errors>
+</robot>
